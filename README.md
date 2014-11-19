@@ -1,5 +1,6 @@
 cofy-mysql
 ==========
+[![Build Status](https://travis-ci.org/RocksonZeta/cofy.svg?branch=master)](https://travis-ci.org/RocksonZeta/cofy-mysql)
 
 cofy mysql
 
@@ -10,10 +11,10 @@ cofy mysql
 var mysql = require('cofy-mysql');
 
 var pool = mysql.createPool({
-    host     : 'localhost',
+    host     : '127.0.0.1',
     user     : 'root',
-    password : '123456',
-    database : 'db',
+    password : '',
+    database : 'test',
     queryFormat: function(query, values) {
         if (!values) return query;
         return query.replace(/\:(\w+)/g, function(txt, key) {

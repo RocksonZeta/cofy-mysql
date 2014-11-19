@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "cofy mysql",
   "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive -R spec --require should --harmony test/ --bail",
+    "test-cov": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha  -- -u exports --require should  --recursive test/ --bail",
+    "test-travis": "node --harmony node_modules/istanbul-harmony/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -u exports --require should  --recursive test/ --bail"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/RocksonZeta/cofy-mysql.git"
@@ -11,8 +16,7 @@
     "mysql",
     "co",
     "cofy",
-    "cofy-mysql",
-    "es6"
+    "cofy-mysql"
   ],
   "license": "MIT",
   "dependencies": {
@@ -21,5 +25,14 @@
   },
   "engines": {
     "node": ">= 0.11.9"
+  },
+  "devDependencies": {
+    "co": "^4.0.0",
+    "coveralls": "^2.11.2",
+    "istanbul-harmony": "^0.3.0",
+    "mocha": "^2.0.1",
+    "mocha-lcov-reporter": "0.0.1",
+    "should": "^4.3.0",
+    "supertest": "^0.13.0"
   }
 }
