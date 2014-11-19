@@ -5,6 +5,10 @@ cofy-mysql
 cofy mysql
 
 **invoke convention: `yield obj.$asyncMethod`**
+##Installation
+```
+$ npm install cofy-mysql --save
+```
 
 ### Example:
 ```js
