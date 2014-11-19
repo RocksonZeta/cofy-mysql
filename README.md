@@ -1,6 +1,6 @@
 cofy-mysql
 ==========
-[![Build Status](https://travis-ci.org/RocksonZeta/cofy.svg?branch=master)](https://travis-ci.org/RocksonZeta/cofy-mysql)
+[![Build Status](https://travis-ci.org/RocksonZeta/cofy-mysql.svg?branch=master)](https://travis-ci.org/RocksonZeta/cofy-mysql)
 
 cofy mysql
 
