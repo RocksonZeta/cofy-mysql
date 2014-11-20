@@ -2,7 +2,7 @@ cofy-mysql
 ==========
 [![Build Status](https://travis-ci.org/RocksonZeta/cofy-mysql.svg?branch=master)](https://travis-ci.org/RocksonZeta/cofy-mysql)
 
-cofy mysql
+[mysql](https://github.com/felixge/node-mysql) co version.
 
 **invoke convention: `yield obj.$asyncMethod`**
 ##Installation
@@ -57,3 +57,9 @@ co(function*(){
     }
 })
 ```
+
+### Extra methods
+Connection & Pool
+----------
+- **$q(sql,[params])** - Get records from query result set,but except columns info. 
+- **$q1(sql,[params])** - Get first record from query result set only.

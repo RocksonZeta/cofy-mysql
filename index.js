@@ -21,7 +21,12 @@ Connection.prototype.$q1 = function(sql,opt){
 	var _this = this;
 	return function(done){
 		_this.query(sql ,opt , function(e,r){
-			done(e,r&&r[0]);
+			if(e)done(e);
+			if(r instanceof Array){
+				done(e,r[0]);
+			}else{
+				done(e,r);
+			}
 		});
 	};
 };
@@ -37,7 +42,12 @@ Pool.prototype.$q1 = function(sql,opt){
 	var _this = this;
 	return function(done){
 		_this.query(sql ,opt , function(e,r){
-			done(e,r&&r[0]);
+			if(e)done(e);
+			if(r instanceof Array){
+				done(e,r[0]);
+			}else{
+				done(e,r);
+			}
 		});
 	};
 };

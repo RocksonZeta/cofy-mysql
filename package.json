@@ -1,6 +1,6 @@
 {
   "name": "cofy-mysql",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "cofy mysql",
   "main": "index.js",
   "scripts": {
